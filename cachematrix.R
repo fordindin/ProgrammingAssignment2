@@ -32,7 +32,7 @@ cacheSolve <- function(x, ...) {
 			message("Getting inverse from cache")
 			return(m)
 		}
-		solution <- solve(x$get())
+		solution <- solve(x$get(), ...)
 		## cache solution
 		x$setinverse(solution)
 		## Return a matrix that is the inverse of 'x'
